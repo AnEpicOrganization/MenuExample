@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.jgutierrez.android.menuexample.MainActivity">
+    <item android:id="@+id/ctx_1"
+        android:title="@string/menu_ctx_1" />
+    <item android:id="@+id/ctx_2"
+        android:title="@string/menu_ctx_2" />
+    <item android:id="@+id/ctx_3"
+        android:title="@string/menu_ctx_3" />
+</menu>

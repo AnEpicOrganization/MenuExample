@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.jgutierrez.android.menuexample.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_menu_opt1"
+        android:orderInCategory="101"
+        android:title="@string/action_menu_opt1"
+        app:showAsAction="never">
+        <menu>
+            <group android:id="@+id/menu_group1"
+                android:checkableBehavior="single">
+                <item android:id="@+id/menu_group1_opt1"
+                    android:title="@string/menu_group1_opt1" />
+                <item android:id="@+id/menu_group1_opt2"
+                    android:title="@string/menu_group1_opt2" />
+            </group>
+            <group android:id="@+id/menu_group2">
+                <item android:id="@+id/menu_group2_opt1"
+                    android:title="@string/menu_group1_opt1" />
+                <item android:id="@+id/menu_group2_opt2"
+                    android:title="@string/menu_group1_opt2" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_menu_opt2"
+        android:orderInCategory="102"
+        android:title="@string/action_menu_opt2"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/action_menu_opt1_sub1"
+                android:title="@string/action_menu_opt2_sub1" />
+            <item
+                android:id="@+id/action_menu_opt1_sub2"
+                android:title="@string/action_menu_opt2_sub2" />
+            <item
+                android:id="@+id/action_menu_opt1_sub3"
+                android:title="@string/action_menu_opt2_sub3" />
+        </menu>
+    </item>
+</menu>

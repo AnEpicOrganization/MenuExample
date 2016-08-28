@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MenuEjemplo</string>
+    <string name="action_menu_opt1">Opción 1</string>
+    <string name="action_menu_opt2_sub1">Sub opción 1</string>
+    <string name="action_menu_opt2">Opción 2</string>
+    <string name="action_menu_opt2_sub2">Sub opción 2</string>
+    <string name="action_menu_opt2_sub3">Sub opción 3</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="hello_world">¡Hola Mundo!</string>
+    <string name="menu_ctx_1">Comprar</string>
+    <string name="menu_ctx_2">Vender</string>
+    <string name="menu_ctx_3">Compartir</string>
+    <string name="opt1_sel">Opción 1 seleccionada</string>
+    <string name="buy_excl">¡Comprar!</string>
+    <string name="lets_buy">Vamo a comprarlo</string>
+    <string name="shared_excl">¡Compartido!</string>
+    <string name="sharing">Compartiendo...</string>
+    <string name="sub1_sel">Sub opción 1 seleccionada</string>
+    <string name="sub2_sel">Sub opción 2 seleccionada</string>
+    <string name="sub3_sel">Sub opción 3 seleccionada</string>
+    <string name="menu_group1_opt1">Opción 1.1</string>
+    <string name="menu_group1_opt2">Opción 1.2</string>
+</resources>

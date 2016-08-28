@@ -21,4 +21,6 @@
     <string name="sub3_sel">Sub opción 3 seleccionada</string>
     <string name="menu_group1_opt1">Opción 1.1</string>
     <string name="menu_group1_opt2">Opción 1.2</string>
+    <string name="menu_group2_opt1">Opción 2.1</string>
+    <string name="menu_group2_opt2">Opción 2.2</string>
 </resources>

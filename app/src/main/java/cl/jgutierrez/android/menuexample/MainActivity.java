@@ -7,14 +7,16 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
     public void sayToast(String str) {
         Toast.makeText(MainActivity.this, str, Toast.LENGTH_SHORT).show();
     }
@@ -45,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu (Menu menu) {
+        SubMenu sub = menu.findItem(R.id.action_menu_opt1).getSubMenu();
+        CheckBox check = (CheckBox) findViewById(R.id.checkBox);
+        sub.setGroupEnabled(R.id.menu_group1, check.isChecked());
+        return super.onPrepareOptionsMenu (menu);
     }
 
     @Override

@@ -12,7 +12,7 @@
         android:orderInCategory="101"
         android:title="@string/action_menu_opt1"
         app:showAsAction="never">
-        <menu>
+        <menu android:id="@+id/action_group_cont">
             <group android:id="@+id/menu_group1"
                 android:checkableBehavior="single">
                 <item android:id="@+id/menu_group1_opt1"
@@ -22,9 +22,9 @@
             </group>
             <group android:id="@+id/menu_group2">
                 <item android:id="@+id/menu_group2_opt1"
-                    android:title="@string/menu_group1_opt1" />
+                    android:title="@string/menu_group2_opt1" />
                 <item android:id="@+id/menu_group2_opt2"
-                    android:title="@string/menu_group1_opt2" />
+                    android:title="@string/menu_group2_opt2" />
             </group>
         </menu>
     </item>

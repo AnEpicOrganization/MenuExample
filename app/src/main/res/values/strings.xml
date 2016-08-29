@@ -13,11 +13,13 @@
     <string name="menu_ctx_3">Share</string>
     <string name="buy_excl">Buy!</string>
     <string name="lets_buy">Let\'s sell it!</string>
-    <string name="sharing">Sharing...</string>
+    <string name="sharing">Sharing&#8230;</string>
     <string name="shared_excl">Shared!</string>
     <string name="sub1_sel">Sub option 1 selected</string>
     <string name="sub2_sel">Sub option 2 selected</string>
     <string name="sub3_sel">Sub option 3 selected</string>
     <string name="menu_group1_opt1">Option 1.1</string>
     <string name="menu_group1_opt2">Option 1.2</string>
+    <string name="menu_group2_opt1">Option 2.1</string>
+    <string name="menu_group2_opt2">Option 2.2</string>
 </resources>

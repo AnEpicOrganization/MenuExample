@@ -26,4 +26,33 @@
         android:id="@+id/save"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Configuraciones"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/save"
+        android:layout_alignEnd="@+id/switchCompraAuto" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/numFruta"
+        android:layout_below="@+id/switchCompraAuto"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/unidades_a_comprar"
+        android:id="@+id/textNumFruta"
+        android:layout_alignBottom="@+id/numFruta"
+        android:layout_toStartOf="@+id/save" />
+
 </RelativeLayout>

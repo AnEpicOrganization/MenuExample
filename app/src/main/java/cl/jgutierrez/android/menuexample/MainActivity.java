@@ -1,8 +1,13 @@
 package cl.jgutierrez.android.menuexample;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -14,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> array = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, FRUITS);
         list.setAdapter(array);
         registerForContextMenu(list);
+        loadPreferences();
     }
 
     @Override
@@ -64,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id) {
             case R.id.action_settings:
-                Intent intent = new Intent(this, SettingsActivity.class);
+                Intent intent = new Intent(this, appPreferences.class);
                 startActivity(intent);
                 return true;
             case R.id.action_menu_opt1:
@@ -124,5 +131,16 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onContextItemSelected(item);
         }
+    }
+    private void loadPreferences(){
+        SharedPreferences sharedPreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        boolean nightModeActive = sharedPreferences.getBoolean("background_color", false);
+        if(nightModeActive){
+            LinearLayout mainLayout= (LinearLayout) findViewById(R.id.mainActivityLayout);
+            mainLayout.setBackgroundColor(Color.parseColor("3c3f41"));
+        }
+        boolean frutaAuto = sharedPreferences.getBoolean("FrutaAuto",false);
+        String usuario = sharedPreferences.getString("user","");
+
     }
 }

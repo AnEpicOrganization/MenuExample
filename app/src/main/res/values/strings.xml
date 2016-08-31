@@ -8,6 +8,7 @@
     <string name="action_menu_opt2_sub1">Sub option 1</string>
     <string name="action_menu_opt2_sub2">Sub option 2</string>
     <string name="action_menu_opt2_sub3">Sub option 3</string>
+    <string name="title_preferences">Configuraciones</string>
     <string name="menu_ctx_1">Buy</string>
     <string name="menu_ctx_2">Sell</string>
     <string name="menu_ctx_3">Share</string>

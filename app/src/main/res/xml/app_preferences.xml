@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="General">
+
+        <CheckBoxPreference
+            android:title="Modo Nocturno"
+            android:key="background_color"
+            android:defaultValue="false"
+                />
+
+        <EditTextPreference
+            android:title="Nombre de Usuario"
+            android:key="user"
+            android:defaultValue=""
+            />
+        </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Compras">
+    <SwitchPreference
+        android:title="Comprar fruta automaticamente"
+        android:key="FrutaAuto"
+        android:defaultValue="false"
+        />
+        </PreferenceCategory>
+t</PreferenceScreen>

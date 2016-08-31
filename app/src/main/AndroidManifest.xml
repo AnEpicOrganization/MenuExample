@@ -18,20 +18,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity"></activity>
 
-        <!--Creamos un reviver que recibe como name la clase que
-        controla el widget-->
+        <!--
+        Creamos un reviver que recibe como name la clase que
+        controla el widget
+        -->
         <receiver android:name=".WidgetControl">
-            <!--reciver define el elemento al que va a responder el widget-->
+
+            <!-- reciver define el elemento al que va a responder el widget -->
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-            <!--Hace referencia al archivo de configuración del widget-->
+            <!-- Hace referencia al archivo de configuración del widget -->
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/basic_widget_provider"/>
+                android:resource="@xml/basic_widget_provider" />
         </receiver>
+
+        <activity android:name=".appPreferences"
+            android:label="@string/action_settings"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>

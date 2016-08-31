@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         check = sharedPreferences.getBoolean("HabilitarOpciones", false);
         boolean frutaAuto = sharedPreferences.getBoolean("FrutaAuto",false);
-        String usuarioName = sharedPreferences.getString("user","");
+        String usuarioName = sharedPreferences.getString("user","Usuario");
         TextView usuario = (TextView) findViewById(R.id.user);
         usuario.setText(usuarioName);
 

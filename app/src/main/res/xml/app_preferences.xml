@@ -4,8 +4,8 @@
         android:title="General">
 
         <CheckBoxPreference
-            android:title="Modo Nocturno"
-            android:key="background_color"
+            android:title="Habilitar opciones"
+            android:key="HabilitarOpciones"
             android:defaultValue="false"
                 />
 

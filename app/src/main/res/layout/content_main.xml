@@ -26,12 +26,13 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView" />
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Habilitar opciones"
-        android:id="@+id/checkBox"
-        android:layout_alignEnd="@+id/listView"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignBottom="@+id/textView" />
+        android:text="Usuario"
+        android:id="@+id/user"
+        android:paddingBottom="8dp"
+        android:layout_above="@+id/listView"
+        android:layout_alignEnd="@+id/listView" />
+
 </RelativeLayout>

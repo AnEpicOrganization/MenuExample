@@ -21,9 +21,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
+    boolean check;
     public void sayToast(String str) {
         Toast.makeText(MainActivity.this, str, Toast.LENGTH_SHORT).show();
     }
@@ -60,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onPrepareOptionsMenu (Menu menu) {
         SubMenu sub = menu.findItem(R.id.action_menu_opt1).getSubMenu();
-        CheckBox check = (CheckBox) findViewById(R.id.checkBox);
-        sub.setGroupEnabled(R.id.menu_group1, check.isChecked());
+        sub.setGroupEnabled(R.id.menu_group1, check);
         return super.onPrepareOptionsMenu (menu);
     }
 
@@ -133,14 +136,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void loadPreferences(){
-        SharedPreferences sharedPreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
-        boolean nightModeActive = sharedPreferences.getBoolean("background_color", false);
-        if(nightModeActive){
-            LinearLayout mainLayout= (LinearLayout) findViewById(R.id.mainActivityLayout);
-            mainLayout.setBackgroundColor(Color.parseColor("3c3f41"));
-        }
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        check = sharedPreferences.getBoolean("HabilitarOpciones", false);
         boolean frutaAuto = sharedPreferences.getBoolean("FrutaAuto",false);
-        String usuario = sharedPreferences.getString("user","");
+        String usuarioName = sharedPreferences.getString("user","");
+        TextView usuario = (TextView) findViewById(R.id.user);
+        usuario.setText(usuarioName);
 
     }
 }

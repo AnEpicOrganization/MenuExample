@@ -136,12 +136,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void loadPreferences(){
+        //Obtiene una instancia de SharedPreferences que apunta
+        // al archivo predeterminado que es utilizado por el framework de preferencia en el contexto dado
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         check = sharedPreferences.getBoolean("HabilitarOpciones", false);
+        //obtiene datos de la shared preferences el primer argumento es el nombre como se guarda en el xml
+        // de sharedPreferences el segundo es el valor que se dara en caso de que no se encuentre el dato guardado(default)
         boolean frutaAuto = sharedPreferences.getBoolean("FrutaAuto",false);
         String usuarioName = sharedPreferences.getString("user","Usuario");
         TextView usuario = (TextView) findViewById(R.id.user);
         usuario.setText(usuarioName);
+
 
     }
 }

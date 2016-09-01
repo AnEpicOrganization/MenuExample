@@ -1,11 +1,10 @@
 package cl.jgutierrez.android.menuexample;
 
-import android.preference.CheckBoxPreference;
-import android.preference.PreferenceFragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import android.support.v7.app.AppCompatActivity;
 
 public class appPreferences extends AppCompatActivity {
 
@@ -14,12 +13,12 @@ public class appPreferences extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getFragmentManager(); //fragmentManager: interactua con objetos fragment de una activity
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); // fragmentTransacion: API para realizar un conjunto de operaciones fragment
 
-        SettingsFragment settingsFragment =  new SettingsFragment();
-        fragmentTransaction.add(android.R.id.content, settingsFragment, "SETTINGS_FRAGMENT");
-        fragmentTransaction.commit();
+        SettingsFragment settingsFragment =  new SettingsFragment();//permite guardar automaticamente SharedPreferences cuando el usuario interactua
+        fragmentTransaction.add(android.R.id.content, settingsFragment, "SETTINGS_FRAGMENT");//content: obtiene el elemento root de una vista, "SETTINGS_FRAGMENT" nombre del xml donde se guardan los datos
+        fragmentTransaction.commit();//guarda la transaccion
 
     }
 

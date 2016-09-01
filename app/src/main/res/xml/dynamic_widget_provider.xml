@@ -5,5 +5,5 @@
     android:minHeight="110dip"
     android:label="@string/dynamic_widget"
     android:updatePeriodMillis="3600000"
-    android:configure="cl.jgutierrez.android.menuexample.WidgetConfig"
+    android:configure="cl.jgutierrez.android.menuexample.DynamicWidgetCtrl"
     />

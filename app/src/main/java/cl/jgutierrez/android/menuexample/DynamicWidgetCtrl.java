@@ -16,7 +16,7 @@ import java.text.ParseException;
  * Created by matias on 31-08-16.
  */
 
-public class WidgetConfig extends Activity {
+public class DynamicWidgetCtrl extends Activity {
 
     private int widgetId = 0;
 
@@ -70,9 +70,9 @@ public class WidgetConfig extends Activity {
 
                 //Actualizamos el widget tras la configuración
                 AppWidgetManager appWidgetManager =
-                        AppWidgetManager.getInstance(WidgetConfig.this);
+                        AppWidgetManager.getInstance(DynamicWidgetCtrl.this);
                 try {
-                    DynamicWidget.updateWidget(WidgetConfig.this, appWidgetManager, widgetId);
+                    DynamicWidget.updateWidget(DynamicWidgetCtrl.this, appWidgetManager, widgetId);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }

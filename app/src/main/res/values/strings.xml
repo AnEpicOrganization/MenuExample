@@ -23,5 +23,9 @@
     <string name="menu_group1_opt2">Option 1.2</string>
     <string name="menu_group2_opt1">Option 2.1</string>
     <string name="menu_group2_opt2">Option 2.2</string>
-    <string name="unidades_a_comprar">Unidades a comprar</string>
+    <string name="dynamic_widget">Dynamic Widget</string>
+    <string name="custom_msg">Inserte un texto</string>
+    <string name="update">Actualizar</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
 </resources>
